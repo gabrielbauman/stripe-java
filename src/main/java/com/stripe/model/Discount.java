@@ -24,6 +24,7 @@ public class Discount {
 	public void setCode(String code) {
 		this.code = code;
 	}
+
 	@JsonProperty("percent_off")
 	public int getPercentOff() {
 		return percentOff;

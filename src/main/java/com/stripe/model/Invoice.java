@@ -12,8 +12,7 @@ public class Invoice {
 	public Invoice() {
 	}
 
-	public Invoice(long created, long subtotal, long total, String id,
-			Lines lines, Discount discount) {
+	public Invoice(long created, long subtotal, long total, String id, Lines lines, Discount discount) {
 		super();
 		this.created = created;
 		this.subtotal = subtotal;

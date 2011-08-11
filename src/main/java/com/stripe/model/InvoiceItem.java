@@ -10,8 +10,7 @@ public class InvoiceItem {
 	public InvoiceItem() {
 	}
 
-	public InvoiceItem(long date, long amount, String description,
-			String currency, String id) {
+	public InvoiceItem(long date, long amount, String description, String currency, String id) {
 		super();
 		this.date = date;
 		this.amount = amount;

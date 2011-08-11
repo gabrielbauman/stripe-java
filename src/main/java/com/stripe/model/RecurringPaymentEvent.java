@@ -12,8 +12,7 @@ public class RecurringPaymentEvent {
 	public RecurringPaymentEvent() {
 	}
 
-	public RecurringPaymentEvent(long customer, long attempt,
-			boolean livemode, Invoice invoice, Payment payment) {
+	public RecurringPaymentEvent(long customer, long attempt, boolean livemode, Invoice invoice, Payment payment) {
 		super();
 		this.customer = customer;
 		this.attempt = attempt;
