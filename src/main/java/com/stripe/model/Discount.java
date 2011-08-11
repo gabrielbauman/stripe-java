@@ -1,16 +1,20 @@
 package com.stripe.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Discount {
 	protected String code;
-	protected int percent_off;
+	protected int percentOff;
 
 	public Discount() {
 	}
 
-	public Discount(String code, int percent_off) {
+	public Discount(String code, int percentOff) {
 		super();
 		this.code = code;
-		this.percent_off = percent_off;
+		this.percentOff = percentOff;
 	}
 
 	public String getCode() {
@@ -20,13 +24,13 @@ public class Discount {
 	public void setCode(String code) {
 		this.code = code;
 	}
-
-	public int getPercent_off() {
-		return percent_off;
+	@JsonProperty("percent_off")
+	public int getPercentOff() {
+		return percentOff;
 	}
 
-	public void setPercent_off(int percent_off) {
-		this.percent_off = percent_off;
+	public void setPercentOff(int percentOff) {
+		this.percentOff = percentOff;
 	}
 
 }

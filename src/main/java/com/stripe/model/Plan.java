@@ -1,24 +1,27 @@
 package com.stripe.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Plan {
 	protected String id;
 	protected long amount;
 	protected String currency;
 	protected String interval;
-	protected int trial_period_days;
+	protected int trialPeriodDays;
 	protected String identifier;
 
 	public Plan() {
 	}
 
-	public Plan(String id, long amount, String currency, String interval,
-			int trial_period_days, String identifier) {
+	public Plan(String id, long amount, String currency, String interval, int trialPeriodDays, String identifier) {
 		super();
 		this.id = id;
 		this.amount = amount;
 		this.currency = currency;
 		this.interval = interval;
-		this.trial_period_days = trial_period_days;
+		this.trialPeriodDays = trialPeriodDays;
 		this.identifier = identifier;
 	}
 
@@ -54,12 +57,13 @@ public class Plan {
 		this.interval = interval;
 	}
 
-	public int getTrial_period_days() {
-		return trial_period_days;
+	@JsonProperty("trial_period_days")
+	public int getTrialPeriodDays() {
+		return trialPeriodDays;
 	}
 
-	public void setTrial_period_days(int trial_period_days) {
-		this.trial_period_days = trial_period_days;
+	public void setTrialPeriodDays(int trialPeriodDays) {
+		this.trialPeriodDays = trialPeriodDays;
 	}
 
 	public String getIdentifier() {

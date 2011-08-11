@@ -1,5 +1,8 @@
 package com.stripe.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Invoice {
 	protected long created, subtotal, total;
 	protected String id;

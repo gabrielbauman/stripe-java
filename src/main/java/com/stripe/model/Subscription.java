@@ -1,8 +1,12 @@
 package com.stripe.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.codehaus.jackson.annotate.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Subscription {
-	protected long current_period_end, current_period_start, trial_end,
-			trial_start, start, canceled_at, ended_at;
+	protected long currentPeriodEnd, currentPeriodStart, trialEnd, trialStart, start, canceledAt, endedAt;
+
 	protected Plan plan;
 	protected String customer;
 	protected String status;
@@ -11,53 +15,56 @@ public class Subscription {
 	public Subscription() {
 	}
 
-	public Subscription(long current_period_end, long current_period_start,
-			long trial_end, long trial_start, long start, Plan plan,
-			String customer, String status, Period period, long canceled_at, long ended_at) {
+	public Subscription(long currentPeriodEnd, long currentPeriodStart, long trialEnd, long trialStart, long start,
+			long canceledAt, long endedAt, Plan plan, String customer, String status, Period period) {
 		super();
-		this.current_period_end = current_period_end;
-		this.current_period_start = current_period_start;
-		this.trial_end = trial_end;
-		this.trial_start = trial_start;
+		this.currentPeriodEnd = currentPeriodEnd;
+		this.currentPeriodStart = currentPeriodStart;
+		this.trialEnd = trialEnd;
+		this.trialStart = trialStart;
 		this.start = start;
+		this.canceledAt = canceledAt;
+		this.endedAt = endedAt;
 		this.plan = plan;
 		this.customer = customer;
 		this.status = status;
 		this.period = period;
-		this.canceled_at = canceled_at;
-		this.ended_at = ended_at;
 	}
 
-	public long getCurrent_period_end() {
-		return current_period_end;
+	@JsonProperty("current_period_end")
+	public long getCurrentPeriodEnd() {
+		return currentPeriodEnd;
 	}
 
-	public void setCurrent_period_end(long current_period_end) {
-		this.current_period_end = current_period_end;
+	public void setCurrentPeriodEnd(long currentPeriodEnd) {
+		this.currentPeriodEnd = currentPeriodEnd;
 	}
 
-	public long getCurrent_period_start() {
-		return current_period_start;
+	@JsonProperty("current_period_start")
+	public long getCurrentPeriodStart() {
+		return currentPeriodStart;
 	}
 
-	public void setCurrent_period_start(long current_period_start) {
-		this.current_period_start = current_period_start;
+	public void setCurrentPeriodStart(long currentPeriodStart) {
+		this.currentPeriodStart = currentPeriodStart;
 	}
 
-	public long getTrial_end() {
-		return trial_end;
+	@JsonProperty("trial_end")
+	public long getTrialEnd() {
+		return trialEnd;
 	}
 
-	public void setTrial_end(long trial_end) {
-		this.trial_end = trial_end;
+	public void setTrialEnd(long trialEnd) {
+		this.trialEnd = trialEnd;
 	}
 
-	public long getTrial_start() {
-		return trial_start;
+	@JsonProperty("trial_start")
+	public long getTrialStart() {
+		return trialStart;
 	}
 
-	public void setTrial_start(long trial_start) {
-		this.trial_start = trial_start;
+	public void setTrialStart(long trialStart) {
+		this.trialStart = trialStart;
 	}
 
 	public long getStart() {
@@ -66,6 +73,24 @@ public class Subscription {
 
 	public void setStart(long start) {
 		this.start = start;
+	}
+
+	@JsonProperty("canceled_at")
+	public long getCanceledAt() {
+		return canceledAt;
+	}
+
+	public void setCanceledAt(long canceledAt) {
+		this.canceledAt = canceledAt;
+	}
+
+	@JsonProperty("ended_at")
+	public long getEndedAt() {
+		return endedAt;
+	}
+
+	public void setEndedAt(long endedAt) {
+		this.endedAt = endedAt;
 	}
 
 	public Plan getPlan() {
@@ -98,22 +123,6 @@ public class Subscription {
 
 	public void setPeriod(Period period) {
 		this.period = period;
-	}
-
-	public long getCanceled_at() {
-		return canceled_at;
-	}
-
-	public void setCanceled_at(long canceled_at) {
-		this.canceled_at = canceled_at;
-	}
-
-	public long getEnded_at() {
-		return ended_at;
-	}
-
-	public void setEnded_at(long ended_at) {
-		this.ended_at = ended_at;
 	}
 
 }

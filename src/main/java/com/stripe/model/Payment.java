@@ -1,5 +1,8 @@
 package com.stripe.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Payment {
 	protected long time;
 	protected Card card;

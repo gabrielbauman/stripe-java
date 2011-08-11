@@ -1,5 +1,8 @@
 package com.stripe.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class DeleteResponse {
 	protected String id;
 	protected boolean deleted;

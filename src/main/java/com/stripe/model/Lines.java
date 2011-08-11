@@ -1,19 +1,21 @@
 package com.stripe.model;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Lines {
 	protected Subscription subscription;
 	protected Plan plan;
-	protected InvoiceItem[] invoiceitems;
+	protected InvoiceItem[] invoiceItems;
 
 	public Lines() {
 	}
 
-	public Lines(Subscription subscription, Plan plan,
-			InvoiceItem[] invoiceitems) {
+	public Lines(Subscription subscription, Plan plan, InvoiceItem[] invoiceItems) {
 		super();
 		this.subscription = subscription;
 		this.plan = plan;
-		this.invoiceitems = invoiceitems;
+		this.invoiceItems = invoiceItems;
 	}
 
 	public Subscription getSubscription() {
@@ -32,12 +34,12 @@ public class Lines {
 		this.plan = plan;
 	}
 
-	public InvoiceItem[] getInvoiceitems() {
-		return invoiceitems;
+	public InvoiceItem[] getInvoiceItems() {
+		return invoiceItems;
 	}
 
-	public void setInvoiceitems(InvoiceItem[] invoiceitems) {
-		this.invoiceitems = invoiceitems;
+	public void setInvoiceItems(InvoiceItem[] invoiceItems) {
+		this.invoiceItems = invoiceItems;
 	}
 
 }
