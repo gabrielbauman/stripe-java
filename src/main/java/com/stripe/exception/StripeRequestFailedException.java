@@ -1,5 +1,10 @@
 package com.stripe.exception;
 
+/**
+ * {@link StripeRequestFailedException} is thrown when an HTTP request to the
+ * Stripe API returns a response with a 402 status code, indicating that your
+ * parameters were valid and received by the server, but the request failed. 
+ */
 public class StripeRequestFailedException extends StripeException {
 
 	private static final long serialVersionUID = 4861354226945212637L;
