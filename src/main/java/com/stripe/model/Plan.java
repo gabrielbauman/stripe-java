@@ -9,7 +9,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class Plan implements Serializable {
 
 	private static final long serialVersionUID = 2476721098187990372L;
-	
+
 	protected String id;
 	protected long amount;
 	protected String currency;

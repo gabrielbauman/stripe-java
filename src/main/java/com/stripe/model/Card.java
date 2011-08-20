@@ -114,10 +114,6 @@ public class Card implements Serializable {
 		this.expiryYear = expiryYear;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	public void setLast4(String last4) {
 		this.last4 = last4;
 	}

@@ -8,7 +8,7 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 public class StripeErrorResponse implements Serializable {
 
 	private static final long serialVersionUID = 8471677241982331832L;
-	
+
 	public StripeError error;
 
 	public StripeErrorResponse() {
@@ -48,5 +48,13 @@ public class StripeErrorResponse implements Serializable {
 			builder.append("error=").append(error);
 		builder.append("]");
 		return builder.toString();
+	}
+
+	protected StripeError getError() {
+		return error;
+	}
+
+	protected void setError(StripeError error) {
+		this.error = error;
 	}
 }

@@ -8,7 +8,7 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 public class InvoiceItem implements Serializable {
 
 	private static final long serialVersionUID = 5371742599539316631L;
-	
+
 	protected long date, amount;
 	protected String description, currency, id;
 

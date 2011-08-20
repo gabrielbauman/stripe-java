@@ -73,7 +73,7 @@ public class Charge implements Serializable {
 			return false;
 		return true;
 	}
-
+	
 	public long getAmount() {
 		return amount;
 	}
